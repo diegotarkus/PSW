@@ -1,0 +1,11 @@
+a{
+    color:crimson;
+    margin-right: 10px;
+    font-size: large;
+
+}
+
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
