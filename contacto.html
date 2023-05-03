@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Contacto | Proyecto</title>
 </head>
 <body>
@@ -41,10 +42,166 @@
         </div>
     </nav>        
         
-              
+    <div class="container">
+        <h1>Formulario de contacto</h1>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtNombres">Nombre: </label>
+                    <input onblur="validacionFormulario()" type="text" class="form-control" id="txtNombres" placeholder="Ingrese nombres">
+                    <small id="valNombres">Debe ingresar al menos un nombre.</small>
+                </div>
+            </div>
 
-   
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtPApellido">Primer Apellido: </label>
+                    <input onblur="validacionFormulario()" type="text" class="form-control" id="txtPApellido" placeholder="Ingrese primer apellido">
+                    <small id="valPApellido">Debe ingresar su apellido.</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtSApellido">Segundo Apellido: </label>
+                    <input onblur="validacionFormulario()" type="text" class="form-control" id="txtSApellido" placeholder="Ingrese segundo apellido">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtRut">Rut: </label>
+                    <input onblur="validacionFormulario()" onkeyup="validarRut()" type="text" class="form-control" id="txtRut" placeholder="Ingrese RUT" aria-labelledby="rutFormato">
+                    <div id="rutFormato" class="form-text">
+                        Ingrese su rut sin puntos, ni guión.
+                    </div>
+                    <!---- <p class="valido">RUT es válido.</p> -->
+                    <small id="valRut">Debe ingresar su rut.</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtDireccion">Dirección: </label>
+                    <input onblur="validacionFormulario()" type="text" class="form-control" id="txtDireccion" placeholder="Ingrese dirección">
+                    <small id="valDireccion">Debe ingresar su dirección.</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                    <label for="txtComuna">Comuna: </label>
+                    <select onblur="validacionFormulario()" class="form-control" id="cmbComuna" placeholder="Seleccione comuna">
+                        <option selected disabled value="null">Seleccione comuna...</option>
+                        <option value="2">Alhué</option>
+                        <option value="3">Buin</option>
+                        <option value="4">Calera de Tango</option>
+                        <option value="5">Cerrillos</option>
+                        <option value="6">Cerro Navia</option>
+                        <option value="7">Colina</option>
+                        <option value="8">Conchalí</option>
+                        <option value="9">Curacaví</option>
+                        <option value="10">El Bosque</option>
+                        <option value="11">El Monte</option>
+                        <option value="12">Estación Central</option>
+                        <option value="13">Huechuraba</option>
+                        <option value="14">Independencia</option>
+                        <option value="15">Isla de Maipo</option>
+                        <option value="16">La Cisterna</option>
+                        <option value="17">La Florida</option>
+                        <option value="18">La Granja</option>
+                        <option value="19">Lampa</option>
+                        <option value="20">La Pintana</option>
+                        <option value="21">La Reina</option>
+                        <option value="22">Las Condes</option>
+                        <option value="23">Lo Barnechea</option>
+                        <option value="24">Lo Espejo</option>
+                        <option value="25">Lo Prado</option>
+                        <option value="26">Macul</option>
+                        <option value="27">Maipú</option>
+                        <option value="28">María Pinto</option>
+                        <option value="29">Melipilla</option>
+                        <option value="30">Ñuñoa</option>
+                        <option value="31">Padre Hurtado</option>
+                        <option value="32">Paine</option>
+                        <option value="33">Pedro Aguirre Cerda</option>
+                        <option value="34">Peñaflor</option>
+                        <option value="35">Peñalolén</option>
+                        <option value="36">Pirque</option>
+                        <option value="37">Providencia</option>
+                        <option value="38">Pudahuel</option>
+                        <option value="39">Puente Alto</option>
+                        <option value="40">Quilicura</option>
+                        <option value="41">Quinta Normal</option>
+                        <option value="42">Recoleta</option>
+                        <option value="43">Renca</option>
+                        <option value="44">San Bernardo</option>
+                        <option value="45">San Joaquín</option>
+                        <option value="46">San José de Maipo</option>
+                        <option value="47">San Miguel</option>
+                        <option value="48">San Pedro</option>
+                        <option value="49">San Ramón</option>
+                        <option value="50">Santiago</option>
+                        <option value="51">Talagante</option>
+                        <option value="52">Tiltil</option>
+                        <option value="53">Vitacura</option>
+                    </select>
+                    <small id="valComuna">Debe seleccionar una comuna.</small>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtCorreo">Correo electrónico: </label>
+                    <input onblur="validacionFormulario()" type="email" class="form-control" id="txtCorreo" placeholder="Ingrese correo">
+                    <small id="valCorreo">Debe ingresar su correo electrónico.</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtTelefono">Número telefónico: </label>
+                    <input onblur="validacionFormulario()" type="text" class="form-control" id="txtTelefono" placeholder="Ingrese teléfono" aria-labelledby="fonoFormato">
+                    <div id="fonoFormato" class="form-text text-ms-3rem" >
+                        9XXXXXXXX
+                    </div>
+                    <small id="valTelefono">Su teléfono debe tener 9 dígitos.</small>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="txtPassword">Contraseña:</label>
+                    <input onblur="validacionFormulario()" id="txtPassword" type="password" class="form-control" placeholder="Ingrese contraseña" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button onclick="password()" class="btn btn-outline-secondary" type="button" id="button-addon2">
+                        <svg id="mostrar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                          </svg>
+                        <svg id="ocultar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                            <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                            <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+                          </svg>
+                    </button>
+                    <small id="valPassword">Debe ingresar una contraseña</small>
+                </div>
+            </div>
+
+        <div class="col-md-16">
+            <div class="mb-3">
+                <label for="txtMensaje">Mensaje: </label>
+                <input onblur="validacionFormulario()" onkeyup="contadorChar()" type="text" class="form-control lg-66" id="txtMensaje" maxlength="100" placeholder="Escriba su mensaje aquí...">
+                <p id="numChar">100 carácteres restantes.</p>
+                <small id="valMensaje">Debe escribir un mensaje.</small>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary mt-4" onclick="validacionFormulario()">Enviar</button>
+    </div>
+
     <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/formulario.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/popper.min.js"></script>
     

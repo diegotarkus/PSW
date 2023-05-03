@@ -9,3 +9,8 @@ a:hover{
     color: red;
     text-decoration: underline;
 }
+
+small{
+    color: red;
+    font-style: italic;
+}
