@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es-CL">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <title>Proyecto semanal 2023</title>
 
 </head>
+
 <body>
     <div class="container-fluid d-md-block text-center bg-dark text-white py-3">
         <h1>Hola</h1>
@@ -18,7 +20,9 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="home.html">
                 <img class="nav-img" src="assets/img/ayuwoki.jpg" alt="imagen"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,28 +42,69 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
+                    <li><button class="btn btn-primary" id="modo">Modo oscuro</button></li>
                 </ul>
             </div>
         </div>
-    </nav>      
+    </nav>
 
-    <div class="row ms-3">
-        <div class="container mt-5 m">
-            <h3>y aquí de lo que se trata</h3>
+    <div class="titulos">
+        <div class="col-ms-3">
+            <div class="container mt-5 m">
+                <h3>Programación Web.</h3>
+                <h5>Proyecto semestral.</h5>
+            </div>
         </div>
     </div>
 
 
+    <div class="cuerpo">
+        <div class="container mt-5">
+            <p>Usted está viendo nuestro proyecto de página web cuyo contenido está ambientado a --insertar tema--. Nuestro
+                objetivo es
+                aprender a utilizar herramientas de programació código HTML y el uso de framework CSS como Bootstrap.
     
+            </p>
+        </div>    
+    </div>
     
+
+    <div class="wrap d-flex">
+        <div class="widget container-fluid">
+            <div id="reloj"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="container-sm">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <a href="index.html">Inicio</a>
+                            <br>
+                            <a href="about.html">Nosotros</a>
+                            <br>
+                            <a href="contacto.html">Contacto</a>
+                            <br>
+                            <p>Programación web © DuocUC 2023</p>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
     <script src="assets/js/jquery-3.6.4.min.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/relojito.js"></script>
+    <script src="assets/js/darkmode.js"></script>
 </body>
 
-<footer>
-    <ul><a href="index.html" ></a>Inicio</ul>
-    <ul><a href="about.html"></a>Nosotros</ul>
-    <ul><a href="contacto.html"></a>Contacto</ul>
-</footer>
+
 </html>

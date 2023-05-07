@@ -14,3 +14,68 @@ small{
     color: red;
     font-style: italic;
 }
+
+.cuerpo{
+    margin-left: 10px;
+    padding-left: 1px;
+}
+
+.widget p{
+    display: inline-block;
+}
+
+.footer{
+    background: cadetblue;
+
+}
+
+.footer h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.footer ul {
+    padding:0;
+    list-style-type:circle;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+    margin-left: 10px;
+}
+
+.footer a:hover{
+    color :red;
+    opacity: 0.5;
+}
+
+.fecha{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    padding: 20px;
+    width: 100%;
+    background-size: 1px;
+    background: rosybrown; 
+   
+}
+
+.reloj{
+    display: inline-flex;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    padding: 20px;
+    width: 100%;
+    background: rgb(18, 167, 194);
+}
+
+.dark{
+    background: #222;
+    color: #DDD;
+  }
+
+.error{
+    color:red;
+}  
