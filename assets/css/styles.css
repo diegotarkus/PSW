@@ -16,7 +16,7 @@ small{
 }
 
 .cuerpo{
-    margin-left: 10px;
+    margin-left: 0px;
     padding-left: 1px;
 }
 
@@ -62,6 +62,16 @@ small{
 }
 
 .reloj{
+    display: inline-flex;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    padding: 20px;
+    width: 100%;
+    background: rgb(18, 167, 194);
+}
+
+.fecha{
     display: inline-flex;
     text-align: center;
     font-size: 1rem;

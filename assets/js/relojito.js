@@ -1,3 +1,19 @@
+function fecha(){
+    var fecha = new Date();
+    var diaSemana = fecha.getDay();
+    var dia = fecha.getDate();
+    var mes = fecha.getMonth() + 1;
+    var anio = fecha.getFullYear();
+    var fechahoy;
+
+    var semana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+    diaSemana.textContent = semana[diaSemana];
+
+    fechahoy = diaSemana + " " + dia + " de " + mes + " del " + anio;
+    $("#fecha").html(fechahoy);
+}
+
+
 function relojdigital(){
     var tiempo = new Date();
     var minutos = tiempo.getMinutes();
@@ -34,7 +50,7 @@ function relojdigital(){
         hora = hora;
     }
 
-    horacompleta = hora + ":" + minutos + ":" + segundos + exthora;
+    horacompleta = hora + ":" + minutos + ":" + segundos + " " + exthora;
     $("#reloj").html(horacompleta);
 }
 

@@ -56,27 +56,27 @@
                     <label for="nombres">Nombres: </label>
                     <input id="nombres" name="nombres" type="text" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="papellido">Primer apellido: </label>
                     <input id="papellido" name="papellido" type="text" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="sapeliido">Segundo apellido: </label>
                     <input id="sapeliido" name="sapeliido" type="text" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="rut">Rut: </label>
                     <input id="rut" name="rut" type="text" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="direccion">Dirección: </label>
                     <input id="direccion" name="direccion" type="text" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="comuna">Comuna: </label>
                     <select class="form-control" id="comuna" name="comuna" placeholder="Seleccione comuna">
@@ -135,29 +135,83 @@
                         <option value="53">Vitacura</option>
                     </select>
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="correo">Correo eléctronico: </label>
                     <input id="correo" name="correo" type="email" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="telefono">Teléfono: </label>
                     <input id="telefono" name="telefono" type="text" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="password">Contraseña: </label>
                     <input id="password" name="password" type="password" class="form-control">
                 </div>
-
+    
                 <div class="mb-3">
                     <label for="mensaje">Comentario: </label>
-                    <input onkeyup="contadorChar()" maxlength="100" id="mensaje" name="mensaje" type="text" class="form-control">
+                    <input onkeyup="contadorChar()" maxlength="100" id="mensaje" name="mensaje" type="text"
+                        class="form-control">
                     <p id="numChar">100 carácteres restantes.</p>
                 </div>
-                <button class="btn btn-primary mt-3">Enviar</button>                
+                <button class="btn btn-primary mt-3">Enviar</button>
+                <br>
+            </div>    
         </form>
+        <br>
+        <hr>    
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h6>Navegación</h6>
+                        <ul>
+                            <a href="index.html">Inicio</a>
+                            <br>
+                            <a href="about.html">Nosotros</a>
+                            <br>
+                            <a href="contacto.html">Contacto</a>
+                            <br>
+
+                        </ul>
+                        
+                    </div>
+
+                    <div class="col-xs-4 col-md-3">
+                        <h6>Links</h6>
+                        <ul>
+                           <a href="https://www.google.cl/">Google</a>
+                           <br> 
+                           <a href="https://www.youtube.com/">Youtube</a>
+                           <br>
+                           <a href="https://www.github.com">GitHub</a>
+                           <br>
+                           <a href="https://www.w3schools.com">w3schools</a>
+                           <br>
+                           <a href="https://getbootstrap.com/docs/5.3/">Bootstrap Docs</a>
+                        </ul>    
+                    </div>
+
+                    <div class="col xs-4 col-md-3">
+                        <h6>¿Qué hora es?</h6>
+                        <div id="reloj"></div>
+                        <ul>
+                            <img src="" alt="">
+                            <br>
+                            <p>Programación web © DuocUC 2023</p>
+                        </ul>
+                    </div>
+                </div>
+
+                
+            </div>
+        </footer>
     </div>
 
     <script src="assets/js/jquery-3.6.4.min.js"></script>
@@ -166,6 +220,7 @@
     <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/darkmode.js"></script>
     <script src="assets/js/formularioJQuery.js"></script>
+    <script src="assets/js/relojito.js"></script>
  
 
     

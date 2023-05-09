@@ -67,20 +67,17 @@
             </p>
         </div>    
     </div>
-    
 
-    <div class="wrap d-flex">
-        <div class="widget container-fluid">
-            <div id="reloj"></div>
-        </div>
+    <div class="container-fluid" id="info-clima">
+
     </div>
-
+    
     <div class="footer">
         <footer>
-            <div class="container-sm">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
-                        <h4>Navegación</h4>
+                        <h6>Navegación</h6>
                         <ul>
                             <a href="index.html">Inicio</a>
                             <br>
@@ -88,11 +85,38 @@
                             <br>
                             <a href="contacto.html">Contacto</a>
                             <br>
-                            <p>Programación web © DuocUC 2023</p>
+
                         </ul>
                         
                     </div>
-                </div>
+
+                    <div class="col-xs-4 col-md-3">
+                        <h6>Links</h6>
+                        <ul>
+                           <a href="https://www.google.cl/">Google</a>
+                           <br> 
+                           <a href="https://www.youtube.com/">Youtube</a>
+                           <br>
+                           <a href="https://www.github.com">GitHub</a>
+                           <br>
+                           <a href="https://www.w3schools.com">w3schools</a>
+                           <br>
+                           <a href="https://getbootstrap.com/docs/5.3/">Bootstrap Docs</a>
+                        </ul>    
+                    </div>
+
+                    <div class="col-md-3">
+                        <h6>¿Qué hora es?</h6>
+                        <br>
+                        <div id="fecha"></div>
+                        <div id="reloj"></div>
+                        <ul>
+                            <img src="" alt="">
+                            <br>
+                            <p>Programación web © DuocUC 2023</p>
+                        </ul>
+                    </div>
+                </div>                
             </div>
         </footer>
     </div>
@@ -103,6 +127,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/relojito.js"></script>
+    <script src="openWeatherMap.js"></script>
     <script src="assets/js/darkmode.js"></script>
 </body>
 
