@@ -88,4 +88,9 @@ small{
 
 .error{
     color:red;
-}  
+}
+
+.img-carr{
+    width: 600px;
+    height: 700px;
+}

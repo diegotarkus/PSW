@@ -13,11 +13,11 @@ $.getJSON(opmUrl, function (datosClima) {
 
         let html_clima =
             `<h4 id="ciudad" class="text-capitalize">${dataClima.name} (${dataPais[0].translations.spa.common}) : ${dataClima.weather[0].description}</h4>
-                        <h4 id="temperatura">Temperatura: ${dataClima.main.temp}°C</h4>
-                        <h4 id="sensacion_termica">Sensación Termica: ${dataClima.main.feels_like}°C</h4>
-                        <h4 id="humedad">Humedad Relativa: ${dataClima.main.humidity}%</h4>
-                        <h4 id="coordenadas">Coordenadas: ${dataClima.coord.lat},${dataClima.coord.lon}</h4>`;
-                                                
+            <h4 id="temperatura">Temperatura: ${dataClima.main.temp}°C</h4>
+            <h4 id="sensacion_termica">Sensación Termica: ${dataClima.main.feels_like}°C</h4>
+            <h4 id="humedad">Humedad Relativa: ${dataClima.main.humidity}%</h4>
+            <h4 id="coordenadas">Coordenadas: ${dataClima.coord.lat},${dataClima.coord.lon}</h4>`;
+
         $('#info-clima').html(html_clima);  
         $('#img-clima').html(html_img);
     })

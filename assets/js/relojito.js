@@ -37,10 +37,10 @@ function relojdigital(){
     }
 
     if(hora >12){
-        exthora = "AM";
+        exthora = "PM";
     }
     else{
-        exthora = "PM";
+        exthora = "AM";
     }
 
     if(hora > 12){
