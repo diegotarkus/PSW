@@ -5,6 +5,10 @@ a{
 
 }
 
+button a{
+    color: antiquewhite;
+}
+
 a:hover{
     color: red;
     text-decoration: underline;
