@@ -4,12 +4,15 @@ function fecha(){
     var dia = fecha.getDate();
     var mes = fecha.getMonth() + 1;
     var anio = fecha.getFullYear();
-    var fechahoy;
 
     var semana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
     diaSemana.textContent = semana[diaSemana];
 
-    fechahoy = diaSemana + " " + dia + " de " + mes + " del " + anio;
+    var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+    mes.textContent = meses[mes];
+
+
+    const fechahoy = diaSemana + " " + dia + " de " + mes + " del " + anio;
     $("#fecha").html(fechahoy);
 }
 

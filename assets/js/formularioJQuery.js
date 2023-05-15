@@ -12,7 +12,7 @@ $(function(){
             },
 
             sapellido:{
-                required: false,
+                required: true,
                 minlength: 3
             },
 
@@ -123,3 +123,64 @@ function contadorChar(){
         document.getElementById("numChar").innerHTML = "Quedan " + contador + " carácteres restantes.";
     }
 }
+
+/* function crearStorage(){
+    let datos = [
+        {
+            nombres: document.getElementById("nombres").value,
+            primer_apellido: document.getElementById("papellido").value,
+            segundo_apellido: document.getElementById("sapellido").value,
+            rut: document.getElementById("rut").value,
+            direccion: document.getElementById("direccion").value,
+            comuna: document.getElementById("comuna").value,
+            correo: document.getElementById("correo").value,
+            telefono: document.getElementById("telefono").value,
+            contraseña: document.getElementById("password").value,
+            mensaje: document.getElementById("mensaje").value
+        },
+    ];
+
+    const almacen = JSON.stringify(datos);
+    localStorage.setItem("datos001", almacen);
+    console.log("Storage agregado.");
+}*/
+
+$(document).ready(function () {
+    $("#registro").click(function () {
+        let datos =
+        {
+            nombres: $("#nombres").value,
+            primer_apellido: $("#papellido").value,
+            segundo_apellido: $("#sapellido").value,
+            rut: $("#rut").value,
+            direccion: $("#direccion").value,
+            comuna: $("#comuna").value,
+            correo: $("#correo").value,
+            telefono: $("#telefono").value,
+            contraseña: $("#password").value,
+            mensaje: $("#mensaje").value
+        };
+
+        if (nombres.value.length >= 3) {
+            Swal.fire({
+                icon: 'success',
+                title: '¡Ha sido registrado!',
+                text: "Bienvenido, " + nombres.value,
+                confirmButtonText: 'OK',
+            })
+
+            const registro = JSON.stringify(datos);
+            localStorage.setItem("datos001", registro);
+            console.log("Storage agregado.");
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "Hay datos faltantes o no válidos.",
+                confirmButtonText: 'OK',
+            });
+        };
+    })
+})
+
+
