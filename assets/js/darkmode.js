@@ -1,10 +1,13 @@
 $(document).ready(function(){
     $('#modo').click(function(){
         var element = document.body;
-        element.classList.toggle("dark"); 
+        element.classList.toggle("dark");
+        console.log("Modo oscuro activado") 
     });
 });
 
-if(localStorage.getItem('dark')) {
-    element.classList.toggle('dark');
-}
+document.addEventListener("DOMContentLoaded", function () {
+    if(localStorage.getItem('dark')) {
+        element.classList.toggle('dark');
+    }
+})
