@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Proyecto semanal 2023</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Index || Proyecto web 2023</title>
 
 </head>
 
 <body>
     <div class="container-fluid d-md-block text-center bg-dark text-white py-3">
-        <h1>Hola</h1>
+        <h1>Proyecto semestral WEB</h1>
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
-                <img class="nav-img" src="assets/img/ayuwoki.jpg" alt="imagen"></a>
+            <a class="navbar-brand" href="index.html">
+                <img class="nav-icon" src="assets/img/nota-musical.png" alt="imagen" width="50" height="50"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="conciertos.html">Información</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Link 2</a>
+                        <a class="nav-link" href="api.html">API</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">Acerca</a>
@@ -48,24 +48,24 @@
         </div>
     </nav>
 
-    <div class="titulos">
-        <div class="col-ms-3">
-            <div class="container mt-5 m">
-                <h3>Programación Web.</h3>
-                <h5>Infomación de conciertos.</h5>
-            </div>
-        </div>
-    </div>
+    <div class="container-fluid">
+      <div class="col-ms-3" style="padding-top:1rem">
 
+          <h2>Portal Conciertos</h2>
+          <h3>Infomación de próximos conciertos.</h3>
 
-    <div class="cuerpo">
-        <div class="container mt-5">
-            <p>Usted está viendo nuestro proyecto de página web cuyo contenido está ambientado a --insertar tema--. Nuestro
-                objetivo es
-                aprender a utilizar herramientas de programació código HTML y el uso de framework CSS como Bootstrap.
-    
-            </p>
-        </div>    
+      </div>
+      <div class="container mt-5">
+        <h5>Bienvenido a tu portal de conciertos, donde podrás encontrar información acerca de los valores, fechas,
+          lugares de tus artistas favoritos y sus visitas a nuestro país!
+        </h5>
+
+        <br>
+
+        <p style="border:1px">Además de ser un importante proyecto para nuestra clase de programación web, donde intentamos aplicar lo aprendido en lenguaje
+          HTML, CSS, JS y sus variades
+        </p>
+      </div>
     </div>
 
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -91,7 +91,7 @@
           <img id="img-carr" src="assets/img/lucybell.png" class="d-block w-100 object-fit-scale border rounded"
             alt="Lucybell" width="600" height="700">
           <div class="carousel-caption d-none d-md-block p-3.5 text-bg-dark bg-opacity-100">
-            <h5><a href="conciertos.html">lUCYBELL</a></h5>
+            <h5><a href="conciertos.html">LUCYBELL</a></h5>
             <p>Movistar Arena - 18 de Agosto</p>
           </div>
         </div>
@@ -147,12 +147,14 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <h6>Navegación</h6>
                         <ul>
                             <a href="index.html">Inicio</a>
                             <br>
                             <a href="conciertos.html">Información conciertos</a>
+                            <br>
+                            <a href="api.html">API</a>
                             <br>
                             <a href="about.html">Nosotros</a>
                             <br>
@@ -163,7 +165,7 @@
                         
                     </div>
 
-                    <div class="col-xs-4 col-md-3">
+                    <div class="col-sm-3">
                         <h6>Links</h6>
                         <ul>
                            <a href="https://www.google.cl/">Google</a>
@@ -178,16 +180,19 @@
                         </ul>    
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-lg-3">
                         <h6>¿Qué hora es?</h6>
                         <br>
                         <div id="fecha"></div>
+                        <br>
                         <div id="reloj"></div>
                         <ul>
-                            <img src="" alt="">
-                            <br>
-                            <p>Programación web © DuocUC 2023</p>
+                            <img src="assets/img/Logo_DuocUC.svg.png" alt="duoc" width="90" height="30"><p>Programación web © DuocUC 2023</p>
                         </ul>
+                    </div>
+                    <div class="col-lg-3">
+                      <h6>Tiempo hoy: <p id="climg"></p></h6>
+                      <div id="clima"></div>
                     </div>
                 </div>                
             </div>
@@ -197,10 +202,10 @@
 
 
     <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/openWeatherMap.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/relojito.js"></script>
-    <script src="openWeatherMap.js"></script>
     <script src="assets/js/darkmode.js"></script>
 </body>
 

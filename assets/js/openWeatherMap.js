@@ -1,24 +1,37 @@
-$.getScript("assets/js/script_key.js", function() {
-    getKey();
+function getLocation(){
+    navigator.geolocation.getCurrentPosition();
+}
+
+function mostrarLatitud(posicion) {
+    const lat = posicion.coords.latitude;
+    return lat;
+}
+
+function mostrarLongitud(posicion){
+    const lon = posicion.coords.longitude;
+    return lon;
+}
+
+let appid = 'a463ce8116628bdeea5e2f598ece7127';
+let lat = '-33.499940';
+let lon = '-70.616395';
+let lang = "sp";
+let units = "metric";
+let owmUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&lang=${lang}&appid=${appid}`;
+
+
+$.getJSON(owmUrl, function(clima){
+    let html =
+        `<p>Pronóstico de hoy: <b>${clima.weather[0].description} </b></p>
+        <p>La temperatura actual es <b>${clima.main.temp} °C </b></p>
+        <p>Con una máxima de <b>${clima.main.temp_max} °C </b> </p>`;
+    
+    $('#clima').html(html);
+
+    let img = `<img src="https://openweathermap.org/img/wn/${clima.weather[0].icon}.png" />`;
+
+    $('#climg').html(img);
+    
 })
 
-let appid = getKey();
-let opmUrl = `https://api.openweathermap.org/data/2.5/weather?q=Santiago&units=metric&lang=es&appid=${appid}`;
 
-$.getJSON(opmUrl, function (datosClima) {
-    let urlPais = `https://restcountries.com/v3.1/alpha/${dataClima.sys.country}`;
-    $.getJSON(urlPais, function (dataPais) {
-        let icon_url = `https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`;
-        let html_img = `<img src="${icon_url}" alt="${dataClima.weather[0].description}"/>`;
-
-        let html_clima =
-            `<h4 id="ciudad" class="text-capitalize">${dataClima.name} (${dataPais[0].translations.spa.common}) : ${dataClima.weather[0].description}</h4>
-            <h4 id="temperatura">Temperatura: ${dataClima.main.temp}°C</h4>
-            <h4 id="sensacion_termica">Sensación Termica: ${dataClima.main.feels_like}°C</h4>
-            <h4 id="humedad">Humedad Relativa: ${dataClima.main.humidity}%</h4>
-            <h4 id="coordenadas">Coordenadas: ${dataClima.coord.lat},${dataClima.coord.lon}</h4>`;
-
-        $('#info-clima').html(html_clima);  
-        $('#img-clima').html(html_img);
-    })
-})  

@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function () {
     $("#formulario").validate({
         rules:{
             nombres:{
@@ -108,10 +108,6 @@ $(function(){
     })
 })
 
-$(function(){
-
-})
-
 function contadorChar(){
     let max = 100;
     let char = mensaje.value.length;
@@ -124,54 +120,38 @@ function contadorChar(){
     }
 }
 
-/* function crearStorage(){
-    let datos = [
-        {
-            nombres: document.getElementById("nombres").value,
-            primer_apellido: document.getElementById("papellido").value,
-            segundo_apellido: document.getElementById("sapellido").value,
-            rut: document.getElementById("rut").value,
-            direccion: document.getElementById("direccion").value,
-            comuna: document.getElementById("comuna").value,
-            correo: document.getElementById("correo").value,
-            telefono: document.getElementById("telefono").value,
-            contraseña: document.getElementById("password").value,
-            mensaje: document.getElementById("mensaje").value
-        },
-    ];
-
-    const almacen = JSON.stringify(datos);
-    localStorage.setItem("datos001", almacen);
-    console.log("Storage agregado.");
-}*/
 
 $(document).ready(function () {
     $("#registro").click(function () {
         let datos =
         {
-            nombres: $("#nombres").value,
-            primer_apellido: $("#papellido").value,
-            segundo_apellido: $("#sapellido").value,
-            rut: $("#rut").value,
-            direccion: $("#direccion").value,
-            comuna: $("#comuna").value,
-            correo: $("#correo").value,
-            telefono: $("#telefono").value,
-            contraseña: $("#password").value,
-            mensaje: $("#mensaje").value
+            nombres: $("#nombres").val(),
+            primer_apellido: $("#papellido").val(),
+            segundo_apellido: $("#sapellido").val(),
+            rut: $("#rut").val(),
+            direccion: $("#direccion").val(),
+            comuna: $("#comuna").val(),
+            correo: $("#correo").val(),
+            telefono: $("#telefono").val(),
+            contraseña: $("#password").val(),
+            mensaje: $("#mensaje").val()
         };
-
-        if (nombres.value.length >= 3) {
+        
+        if ($('#formulario').valid() == true) {
             Swal.fire({
                 icon: 'success',
                 title: '¡Ha sido registrado!',
                 text: "Bienvenido, " + nombres.value,
+                footer: '<b>Datos de registro: </b><br>' + nombres.value + ' ' + papellido.value + ' ' + sapellido.value + '<br>' + rut.value + '<br>' + direccion.value + '<br>' + correo.value + '<br>' + telefono.value + '<br>' + password.value + '<br>' + mensaje.value, 
                 confirmButtonText: 'OK',
             })
 
             const registro = JSON.stringify(datos);
             localStorage.setItem("datos001", registro);
             console.log("Storage agregado.");
+            //$(document).ajaxStop(function(){
+                //window.location.reload();
+            //});
         } else {
             Swal.fire({
                 icon: 'error',

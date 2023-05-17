@@ -1,4 +1,4 @@
-function fecha(){
+function fechadehoy(){
     var fecha = new Date();
     var diaSemana = fecha.getDay();
     var dia = fecha.getDate();
@@ -6,13 +6,12 @@ function fecha(){
     var anio = fecha.getFullYear();
 
     var semana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
-    diaSemana.textContent = semana[diaSemana];
+    var diaHoy = semana[diaSemana - 1];
 
     var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-    mes.textContent = meses[mes];
+    var mesActual = meses[mes - 1];
 
-
-    const fechahoy = diaSemana + " " + dia + " de " + mes + " del " + anio;
+    let fechahoy = diaHoy + " " + dia + " de " + mesActual + " del " + anio;
     $("#fecha").html(fechahoy);
 }
 
@@ -59,4 +58,5 @@ function relojdigital(){
 
 $(document).ready(function(){
     setInterval(relojdigital, 1000 );
+    fechadehoy();
 })
